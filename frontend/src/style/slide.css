@@ -1,0 +1,29 @@
+.react-slideshow-container img{
+    min-height: 20% !important;
+    height: 20% !important;
+    border: none !important;
+    /* width: 80%;  */
+
+}
+.slide-container{
+    height: 250px !important;
+}
+.slidesHolder{
+    height: 250px !important;
+    transition: 0.5s;
+}
+
+@media (max-width:1000px) {
+    .react-slideshow-container img{
+        min-height: 100px !important;
+        height: 150px !important;
+        border: none !important; 
+    }
+
+    .slide-container{
+        height: 150px !important;
+    }
+    .slidesHolder{
+        height: 150px !important;
+    }
+}

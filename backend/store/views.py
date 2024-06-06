@@ -86,7 +86,7 @@ class ProductView(APIView):
 
         for product in products:
             product_images = ProductImages.objects.filter(product_id=product).first()            
-            images = [product_images.image.url]
+            images = [product_images.image.url] if product_images else []
             product_data = {
                 "id":product.id,
                 "category_id": product.category_id.id,
@@ -99,7 +99,7 @@ class ProductView(APIView):
 
             products_data.append(product_data)
 
-        return Response({'products': products_data})
+        return Response(products_data)
     
 class SingleProductView(APIView):
     
